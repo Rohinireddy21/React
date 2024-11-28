@@ -1,0 +1,1804 @@
+Javascript
+
+===========
+ 
+It is a client scripting language
+
+To make the HTML page as interactive web page
+
+Validations are taken care by the client side 
+
+It is lightweight, interpreted programming langauge
+
+It is an object-based scripting langauge
+
+It is designed for creating network-centric applications
+
+It is open and cross-platform
+ 
+Uses of Scripting Langauge
+
+============================
+ 
+Client-side validation
+
+Dynamic drop-down menus
+
+Display Date/ time
+
+Displaying pop-up windows, 
+
+Dialog boxes -- Prompt, alert and confirm
+ 
+Javascript does not support the datatype.
+
+=============================================
+
+var x = 25;
+
+var x = "Capgemini"
+
+var x = true;
+ 
+Programming constructs
+
+=======================
+ 
+1) if condition
+
+2) Switch cases
+
+3) Iterartive statements
+
+4) Arrays
+
+5) Functions
+ 
+Executing the script can be done in 2 ways
+ 
+1. Exceution of javascript using html
+
+2. Execution of javascript using terminal
+ 
+Javascript can be classified into 2 types.
+ 
+1) Internal Javascript
+
+2) External Javascript .js extension
+ 
+ Typescript - Intro
+=====================
+ 
+It is a strongly typed Language
+It is Object Oriented langauge
+It is compiler based language.
+It was designed by Anders Hejisberg at Microsoft
+It acts a programming langauage and also as a tool.
+It is a typed superset of Java script.
+When typescript is compiled it gets converted into java script.
+ 
+Features of Typescript
+=======================
+1. Compilation
+2. Strong Data type
+3. supports type definition
+4. supports object oriented Programming
+ 
+Components of Typescript
+=========================
+using tsc file
+1. Language
+2. Typescript compiler
+3. Typescript Language service
+ 
+Typescript program is composed of
+ 
+a) variables
+b) statements and expressions
+c) functions
+d) comments
+e) Control structures
+f) Iterative statements
+g) Arrays
+h) classes and interfaces
+ 
+ 
+Installation  of typescript
+============================
+ 
+	npm install -g typescript
+ 
+To verify if it installed
+==========================
+ 
+	tsc --version
+ 
+How to create typescript code and execute
+===========================================
+ 
+Step-1 : Create a code and save the file as .ts extension
+Step-2 : compile the code using tsc <filename.ts>
+Step-3 : It creates a javascript code after compilation
+Step-4 : Execute using node <filename.js>
+ 
+Comments in typescript
+===========================
+ 
+// -----> Single line comment
+/* */ ---> Multi line comment
+ 
+ 
+var message :string = "Welcome";
+console.log(message);
+ 
+Interface in typecsript
+==========================
+ 
+interface Iperson{
+    firstname:string,
+    lastname:string,
+    sayHi:() =>string 
+}
+ 
+var customer:Iperson={
+    firstname:"John",
+    lastname : "Doe",
+    sayHi:(): string => { return "Hello"}
+}
+ 
+console.log(customer.firstname);
+console.log(customer.lastname);
+var x =customer.sayHi();
+console.log(x);
+ 
+ 
+classes in Typescript
+=======================
+class Employee{
+    empcode:number;
+    ename:string;
+ 
+    constructor(code:number, name:string){
+        this.empcode=code;
+        this.ename=name;
+    }
+}
+ 
+let emp = new Employee(34567, "Shankar");
+console.log(emp);
+ 
+React
+=======================================================================================
+(1) What is React?
+ 
+-> React is a JavaScript library used to build user interfaces (UI) for web applications.
+->It helps developers create interactive, dynamic, and fast websites.
+->Use for single-web-pages.
+======================================================================
+ 
+ 
+(2) Why Use React?
+ 
+-> If you want to create modern websites or apps that update quickly (without reloading the page), React is a great choice.
+-> It allows you to build reusable components (like small pieces of code) and manage data more efficiently.
+ 
+=============================================================================
+ 
+(3) Component-Based Approach
+ 
+-> React breaks down your application into components.
+-> A component is like a building block of a webpage. For example, a button, a form, or a header can be components.
+-> Components can be reused. This means you can build a button once and use it in many places without rewriting the code.
+ 
+ 
+==================================================================================
+ 
+(4) What is JSX?
+ 
+-> React uses a special syntax called JSX.
+-> JSX allows you to write HTML-like code inside your JavaScript files. This makes it easier to design your UI while keeping everything in one place.
+ 
+==========================================================================
+ 
+(5) Virtual DOM
+ 
+-> React uses something called the Virtual DOM.
+-> The Virtual DOM is like a lightweight copy of the real web page. React updates this copy when something changes (like when a user clicks a button or types in a form).
+-> Then, React compares the Virtual DOM with the real one and only changes the parts that need updating. This makes apps faster and more efficient.
+ 
+===============HOW TO CREATE PROJECT==================
+ 
+step 1: Check if Node.js and npm are installed: node -v
+                                                npm -v
+ 
+step 2: npx create-react-app my-app(project-name)
+ 
+->npx: This runs the create-react-app tool without installing it globally.
+->create-react-app: This is the official tool that sets up a new React project with all the necessary configurations.
+->my-app: This is the name of your React application. You can change it to any name you like.
+ 
+ 
+step 3: cd my-app(project name)
+ 
+step 4: npm start (npm start starts the React development server, 
+which listens for changes to your code and reloads the page automatically in your browser.)
+ 
+App.js->  // Importing React library
+import React from 'react';
+ 
+// Creating a functional component called App
+function App() {
+  return (
+<div className="App">
+<h1>Hello, welcome to React!</h1>
+<p>This is a simple React application.</p>
+</div>
+  );
+}
+ 
+export default App;
+ 
+ 
+step 5:npm install react-router-dom
+     (npm install adds libraries and dependencies to your project.
+    react-router-dom is a popular library for handling routing in React apps.)
+ 
+    
+React Components ================= Comp... by Santhoshini Jahnavi, Akkiraju Shanmukhi
+Santhoshini Jahnavi, Akkiraju Shanmukhi
+Monday 10:18
+React Components
+=================
+Components are independent and reusable bits of code.
+Components come in two types
+*  Class components
+* Function components.
+Class Component:
+A class component must include the extends React.Component statement. 
+This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+The component also requires a render() method, this method returns HTML.
+Key Features of Class Components:
+State: Class components can have a local state that can be used to store and manage data within the component.
+Lifecycle Methods: Class components can use lifecycle methods, 
+which allow you to run code at specific points during the component's lifecycle, such as when the component is mounted, updated, or unmounted.
+this Keyword: In class components, you use the this keyword to refer to the component's instance, access its state, and call methods.
+Syntax of Class Components:
+A class component is defined using the class keyword and extends React.Component. 
+Inside the class, there must be a render() method that returns JSX to be rendered to the UI.
+
+Code : //Creation of Class Component 
+class Car extends React.Component {render() {return <h2>Hi, I am a Car!</h2>;}}
+
+ 
+What does render() do?
+The render() method describes how the component’s UI should look based on its current state or props.
+It returns JSX that defines the structure of the UI (in a form that looks like HTML, but can include JavaScript expressions).
+React will re-render the component whenever the component's state or props change
+ 
+React Function
+================
+ 
+A function component (also called a functional component) is a simpler and more concise way to define a component compared to a class component. 
+It is just a JavaScript function that returns JSX to render the UI.
+ 
+A function component is simply a JavaScript function that accepts props (if necessary) as an argument and returns JSX.
+ 
+No this Keyword: Unlike class components, function components don't have the this keyword. 
+This makes them easier to write and understand. 
+In class components, this refers to the current instance of the class, but in function components, you don't need it to access props or state.
+ 
+No render() Method: Function components don't require a render() method because the entire function acts as the render method. 
+Whatever is returned by the function is rendered to the UI.
+Stateless (Before React Hooks): Initially, function components were considered stateless because they didn't have the ability to manage state or lifecycle methods. They could only receive props and render UI.
+ 
+With React Hooks (State and Effects): Since the introduction of React Hooks in React 16.8, function components can now use state and manage side effects (such as fetching data or subscribing to a service) through hooks like useState and useEffect.
+This brought function components to the same level as class components in terms of capabilities, but they still remain simpler and more concise.
+ 
+//code
+import React from 'react';
+ 
+function Greeting() {
+  return <h2>Hello world!</h2>;
+}
+ 
+export default Greeting;
+Meeting ended: at Monday 10:27 after 1 hour 4 minutes 6 seconds
+Monday 10:27 Meeting ended: 1h 4m 6s
+React js State ==============   WHAT IS S... by Akanksha, Banda
+React js State
+==============
+ 
+WHAT IS STATE REACT JS
+======================
+State is an object that holds data that can change over time in a component.
+ 
+React automatically re-renders the component when the state changes.
+ 
+ 
+Types of Components in React
+=============================
+ 
+ 
+1.Class Components
+==================
+ 
+Traditionally used for managing state.
+State is stored in this.state.
+Updated using this.setState().
+ 
+ 
+2.Functional Components
+======================
+ 
+Modern approach with React Hooks.
+State is managed using the useState hook.
+ 
+useState Syntax  ------ const [state, setState] = useState(initialValue);
+Functional component using state                                                                                                                                            ======================                                                                                                                                             import React ,{useState}from 'react';
+ 
+function App (){
+  const [count,setCount]=useState(0);
+  return (
+    <div>
+      <p>Count:{count}</p>
+      <button onClick={()=>setCount(count+1)}>Increment</button>
+    </div>
+  );
+}
+ 
+export default App;
+class componet using state                                                                                                                                                        =================                                                                                                                                                         import React, { Component } from 'react'
+ 
+export default class App extends Component {
+  constructor(props){
+       super(props);
+       this.state={count:0};
+     }
+     increment=()=>{
+       this.setState({count:this.state.count+1});
+     };
+  render() {
+    return (
+      <div>
+        <p>Count:{this.state.count}</p>
+                <button onClick={this.increment}>Increment</button>
+      </div>
+    )
+  }
+}
+Tuesday
+Meeting started at Tuesday 09:26
+Tuesday 09:26 Meeting started
+Start the session by KR, Shankar
+KR, Shankar
+Tuesday 09:33
+Start the session
+Event: ===== Events are actions or occu... by Vaishnavi, Neela
+Vaishnavi, Neela
+Tuesday 09:40
+Event:
+=====
+Events are actions or occurrences that happen in the system.
+ 
+Event Binding:
+===========
+Event binding refers to the process of connecting event handlers to DOM elements.
+-->React uses synthetic events, which are wrappers around browser events to normalize event handling across different browsers.
+-->In React, event handlers are typically attached using JSX attributes like onClick, onChange, onSubmit that are camelCase versions of their
+HTML counterparts.
+ 
+Event Handlers:
+===========
+Event Handlers are functions that run when specific events occur.
+ 
+Binding Event Handler in Render Method:
+===============================
+We can bind the handler when it is called in the render method using bind() method.
+ 
+import React, { Component } from 'react';
+class EventBind extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			message: 'Welcome to'
+		}
+	}
+	clickHandler() {
+		this.setState({
+			message:'React'
+		})}
+render() {
+return (
+<div>
+<h3>{this.state.message}</h3>
+<button onClick={this.clickHandler.bind(this)}>
+Click</button> 
+</div>
+)	}}
+export default EventBind;
+ 
+Binding Event Handler using Arrow Function:
+=================================
+In this approach we are binding the event handler implicitly.
+ 
+import React, { Component } from 'react';
+class EventBind extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			message: 'Welcome to'
+		}}
+	clickHandler() {
+		this.setState({
+			message:'React'
+		})}
+	render() {
+		return (
+<div>
+<h3>{this.state.message}</h3>
+<button onClick={() => this.clickHandler()}>
+				Click
+</button> 
+</div>
+		)}}
+export default EventBind;
+ 
+Binding Event Handler in the Constructor:
+==============================
+We need to explicitly bind the method to the component instance in the constructor.
+Here, "this" refers to the current component instance when the event handler is invoked.
+ 
+import React, { Component } from 'react';
+class EventBind extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			message: 'Welcome to'
+		}
+		this.clickHandler = this.clickHandler.bind(this);
+	}
+	clickHandler() {
+		this.setState({
+			message:'React'
+		})}
+render() {
+return (
+<div>
+<h3>{this.state.message}</h3>
+<button onClick={this.clickHandler}>
+Click</button> 
+</div>
+)	}}
+export default EventBind;
+LIFE CYCLE OF REACT: ====================... by Chandana, Yerra
+Chandana, Yerra
+Tuesday 09:50
+LIFE CYCLE OF REACT:
+============================================================================
+ 
+A React component undergoes three phases in its lifecycle:
+1. mounting
+2. updating
+3. unmounting
+component goes through from when it is created (mounted) to when it is removed (unmounted). These stages help developers control how the component behaves at different times.
+ 
+1.MOUNTING:
+=============================================================================
+  This phase begins when a component instance  is created and inserted into the DOM.
+  The mounting phase consists of methods:
+  a.constructor
+  b.static getDerivedStateProps
+  c.render()
+  d.componentDidMount()
+ 
+=================================================================================
+a.Constuctor():
+-------------------
+The constuctor is called before the component is mounted into the DOM.Use of this constructor is to initialize local state variables and bind class methods.
+ 
+==================================================================================
+b.static getDerivedStateFromProps:
+-------------------------------------------------
+Called right before rendering, when new props are received. It allows the component to update its state based on the incoming props.
+ 
+==================================================================================
+c.Render:
+--------------
+The only required method in a class component.
+It returns the JSX to render the UI.
+Called every time the component is re-rendered.
+===================================================================================
+d.componentDidMount():
+-----------------------------------
+ 
+This method is automatically called once when the component has been mounted to the DOM (i.e., when the component is rendered for the first time and appears on the screen).
+ 
+setTimeout() is a JavaScript function that allows you to execute some code after a specified delay (in milliseconds).
+ 
+this.setState() is a method used to update the component's state.
+ 
+===================================================================
+2.UPDATING
+ 
+When the component is being re-rendered as  a result of changes to either props or states.
+ 
+a.static getDerivedStateFromProps(nextProps, nextState):
+--------------------------------------------------------------------------
+Method is called every time a component is re-rendered.
+ 
+=====================================================================================
+b.shouldComponentUpdate(nextProps, nextState):
+-----------------------------------------------------------------
+it dictates if the component should re-render or not .
+ 
+Called before the render method, and it allows you to optimize performance by preventing unnecessary renders.
+Returns: true (to continue rendering) or false (to skip rendering).
+ 
+=====================================================================================
+c.setState():
+----------------
+This function is used to update the state of a component.
+ 
+=====================================================================================
+d.getSnapshotBeforeUpdate(prevProps, prevState):
+------------------------------------------------------------------
+ 
+Called right before the changes from the render method are applied to the DOM.
+It can capture some information from the DOM (e.g., scroll position) before the update.
+====================================================================
+e.componentDidUpdate(prevProps, prevState, snapshot):
+-------------------------------------------------------------------------
+ 
+Called after the component has been re-rendered and the DOM has been updated.
+It’s commonly used for performing side effects like fetching data or interacting with the DOM.
+=====================================================================
+3.UNMOUNTING
+ 
+This is the final phase of the lifecycle of the component whic3h is the phase of removing the component from the DOM.
+ 
+componentWillUnmount():
+------------------------------------
+Called just before the component is removed from the DOM.
+Ideal for cleanup tasks such as invalidating timers or canceling network requests.
+ 
+Demo code example:
+----------------------------
+import React, { Component } from 'react';
+ 
+class DemoClassComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Component is mounting...',
+    };
+    console.log('Component is being created');
+  }
+ 
+  // Called before rendering, allows you to update state based on props
+  static getDerivedStateFromProps(nextProps, nextState) {
+    console.log('Component is receiving new props or initial mount');
+    return null; // No state change in this case
+  }
+  render() {
+    console.log('render: Rendering the component');
+    return (
+<div>
+<h1>{this.state.message}</h1>
+</div>
+    );
+  }
+ 
+  // This is called when the component is mounted
+  componentDidMount() {
+    console.log('Component has mounted');
+    // Simulate data fetch after mounting
+    setTimeout(() => {
+      this.setState({ message: 'Component has successfully mounted!' });
+    }, 2000);
+  }
+ 
+  // Called before every render, used for optimization
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Deciding whether to re-render');
+    return true; // Allow re-render
+  }
+ 
+  // Called right before changes are committed to the DOM
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('Before changes are committed to DOM');
+    return null; // No snapshot in this case
+  }
+ 
+  // Called after the component has been updated in the DOM
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log('Component has updated in the DOM');
+  }
+ 
+  // Called before the component is removed from the DOM
+  componentWillUnmount() {
+    console.log('Component is about to be removed');
+  }
+ 
+  
+}
+ 
+export default DemoClassComponent;
+
+React Forms =============================... by ROHINI, G
+React Forms
+=====================================
+*Forms are an integral part of any modern web application.
+*It allows the users to interact with the application as well as gather information from the users. 
+*Forms can perform many tasks that depend on the nature of your business requirements and logic such as authentication of the user,
+adding user, searching, filtering, booking, ordering, etc. 
+*A form can contain text fields, buttons, checkbox, radio button, etc.
+*In React the state of these input items is usually saved in the components state property and only updated with setState().
+*There are mainly two types of form input in React.
+ 
+->Controlled Components
+*In HTML, form elements typically maintain their own state and update it according to the user input. 
+*The input form element is handled by the component rather than the DOM in a controlled component.
+*Here, the mutable state is kept in the state property and will be updated only with setState() method.
+*Rather than acquiring data only once,controlled components have functions that manage the data going into them on every onChange event.
+*Used props to store its current value and uses callbacks,such as an onChange event to notify it of changes.
+ 
+import React, { Component } from 'react';  
+class App extends React.Component {  
+  constructor(props) {  
+      super(props);  
+      this.state = {value: ''};  
+      this.handleChange = this.handleChange.bind(this);  
+      this.handleSubmit = this.handleSubmit.bind(this);  
+  }  
+  handleChange(event) {  
+      this.setState({value: event.target.value});  
+  }  
+  handleSubmit(event) {  
+      alert('You have submitted the input successfully: ' + this.state.value);  
+      event.preventDefault();  
+  }  
+  render() {  
+      return (  
+<form onSubmit={this.handleSubmit}>  
+<h1>Controlled Form Example</h1>  
+<label>  
+                Name:  
+<input type="text" value={this.state.value} onChange={this.handleChange} />  
+</label>  
+<input type="submit" value="Submit" />  
+</form>  
+      );  
+  }  
+}  
+export default App;  
+ 
+ 
+->Uncontrolled Components 
+*The uncontrolled input is similar to the traditional HTML form inputs.
+*The form data is handled by the DOM.(Document Object Model)
+*Here, the HTML elements maintain their own state that will be updated when the input value changes. 
+*To write an uncontrolled component, you need to use a ref to get form values from the DOM. 
+*In other words, there is no need to write an event handler for every state update.
+*You can use a ref to access the input field value of the form from the DOM.
+ 
+import React, { Component } from 'react';  
+class App extends React.Component {  
+  constructor(props) {  
+      super(props);  
+      this.updateSubmit = this.updateSubmit.bind(this);  
+      this.input = React.createRef();  
+  }  
+  updateSubmit(event) {  
+      alert('You have entered the UserName and CompanyName successfully.');  
+      event.preventDefault();  
+  }  
+  render() {  
+    return (  
+<form onSubmit={this.updateSubmit}>  
+<h1>Uncontrolled Form Example</h1>  
+<label>Name:  
+<input type="text" ref={this.input} />  
+</label>  
+<label>  
+            CompanyName:  
+<input type="text" ref={this.input} />  
+</label>  
+<input type="submit" value="Submit" />  
+</form>  
+    );  
+  }  
+}  
+export default App;  
+ 
+ 
+Difference between controlled and uncontrolled component
+ 
+Controlled
+Uncontrolled
+1.
+It does not maintain its internal state.
+It maintains its internal states.
+2.
+Here, data is controlled by the parent component.
+Here, data is controlled by the DOM itself.
+3.
+It accepts its current value as a prop.
+It uses a ref for their current values.
+4.
+It allows validation control.
+It does not allow validation control.
+5.
+It has better control over the form elements and data.
+It has limited control over the form elements and data.
+
+Styling in React JS =====================... by SREEJA, KANDURI
+Styling in React JS
+=====================
+ 
+-> React is a popular JavaScript library for building Single-Page Applications (SPAs) with dynamic user interfaces.
+-> Styling in React can be done in various ways, each with its advantages. 
+-> In this article, we will explore different approaches to applying styles in React including inline styles, CSS files, CSS modules, and styled components.
+ 
+1.Using Inline Styles
+----------------------
+Inline styles in React are defined using the style prop, which accepts an object. The keys in the object are written in camelCase, 
+and the values are the corresponding CSS values.
+ 
+Syntax: The syntax to assign inline styles to CSS elements is mentioned below.
+ 
+<div style={{backgroundColor: 'red'}}></div>
+ 
+->React’s style prop only supports inline styles and does not accept external stylesheets or CSS classes.
+ 
+2.Using CSS File
+-----------------
+ 
+To style elements using a traditional CSS file, you can create a CSS file and import it into your React component.
+ 
+Syntax: The syntax to assign the classes to the className prop is mentioned below.
+ 
+<div className="name_of_the_class"></div>
+ 
+3.Using CSS Modules
+--------------------
+ 
+CSS Modules allow you to locally scope CSS by generating unique class names. To use CSS Modules, create a file with the .module.css extension
+and import it into your component.
+ 
+Syntax:
+ 
+import styles from './App.module.css';
+ 
+Now we can easily assign the classes to the className properties mentioned below.
+ 
+ 
+<div className={styles['container-div']}> 
+<h1 className={styles.heading}>GeeksForGeeks</h1>
+</div>
+ 
+ 
+The square bracket is used to access the class when it contains a hyphen or we can use it generally also. The dot can be used to access the class
+when it does not contain a hyphen.
+ 
+4.Using Styled-Components
+--------------------------
+ 
+ 
+styled-components is a popular library for writing component-level styles in JavaScript. It allows you to create styled components with a combination of 
+CSS and JavaScript.
+ 
+Module Installation: In order to use the styled-components you must first install it as a dependency using the following command from the command line.
+ 
+npm install styled-components
+s
+Syntax: To create a styled component you can use the syntax mentioned below.
+ 
+import styled from 'styled-components';
+const StyleHeading = styled.h1`
+  color: white;
+`;
+ 
+ 
+1).Inline styling
+ 
+App.js
+-----
+const App = () => {
+    return (
+<div
+            style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100vh",
+                backgroundImage:
+                    "linear-gradient(to right, #427ceb, #1dad6f)",
+            }}
+>
+<h1 style={{ color: "white" }>Welcome to React Styling</h1>
+</div>
+    );
+};
+ 
+export default App;
+ 
+2).Using CSS File
+ 
+App.css
+------
+/*App.css*/
+ 
+.container-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, red,blue);
+}
+ 
+.heading {
+    color: white;
+}
+ 
+App.js
+------
+ 
+ 
+import './App.css';
+ 
+const App = () => {
+    return (
+<div className='container-div'>
+<h1 className='heading'>Using CSS File</h1>
+</div>
+    );
+};
+ 
+export default App;
+ 
+3).Using styled components
+--------------------------
+App.js
+---------
+ 
+import styled from 'styled-components';
+ 
+const PageDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right, violet,pink);
+`;
+ 
+const StyleHeading = styled.h1`
+  color: white;
+`;
+ 
+const App = () => {
+    return (
+<PageDiv>
+<StyleHeading>Using Styled Components</StyleHeading>
+</PageDiv>
+    );
+};
+ 
+export default App;
+ 
+ 
+ 
+4).Using CSS Module
+ 
+App.modules.css
+-------------
+ 
+.container-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(
+          to right,black,white);
+}
+ 
+.heading {
+    color: pink;
+}
+ 
+App.js
+------
+ 
+import styles from './App.module.css';
+ 
+const App = () => {
+    return (
+<div className={styles['container-div']}>
+<h1 className={styles.heading}>Using CSS Modules</h1>
+</div>
+    );
+};
+ 
+export default App;
+ 
+Introduction to React Router : ==========... by Thumma, Akshaya
+Introduction to React Router :
+============================
+ 
+- React Routing is a fundamental concept for handling navigation within a React application.
+ 
+- It allows users to move between different views or pages within a web app, without the need for full page reloads.
+ 
+- React Routing is a well-known library from client and server-side routing.
+ 
+ 
+Why is React Routing Important?
+=================================
+ 
+- Single-Page Applications (SPA): React Router enables single-page app behavior, where you can load and render components dynamically without refreshing the entire page.
+- Stateful Routing: React Router helps you manage state and navigation logic in one place, which is ideal for handling complex applications
+ 
+- URL-based Navigation: You can structure your app's URLs logically and have users directly access different parts of your app, making it more intuitive.
+ 
+- Back/Forward Navigation: It supports browser navigation features (back, forward, history), improving the user experience.
+ 
+ 
+Where to Use React Routing?
+============================
+ 
+- Client-side Navigation: React Router is primarily used for navigation within single-page applications. It’s ideal for projects where you want to update the view without a page reload,        	like in dashboards, e-commerce sites, blogs, etc.
+ 
+- Dynamic URLs: Use it for applications where pages change based on user input, like profile pages, or e-commerce product details (e.g., /product/123).
+ 
+ 
+Basic Components of React Router :
+=================================
+ 
+-> BrowserRouter: The main component that wraps your application.
+ 
+-> Route: Defines a route in your app.
+ 
+-> Link: Used for navigation between routes.
+ 
+CODE :
+=======================
+App.js:
+=======
+ 
+import React from 'react';
+import Navbar from '/Navbar';
+import {Routes,Route,BrowserRouter} from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Dashboard from './Dashboard';
+ 
+function App() {
+  return (
+<div>
+<BrowserRouter>
+<Navbar />
+<Route path="/" exact component={Home} />
+<Route path="/about" exact component={About} />
+<Route path="/dashboard" exact component={Dashboard} />
+</BrowserRouter>
+</div>
+  );
+}
+ 
+export default App;
+ 
+Home.js:
+==========
+ 
+import React from 'react'
+const Home = () => {
+    return (
+<div>
+<center>
+<h4>Displaying Home Page</h4>
+</center>
+</div>
+    )
+}
+ 
+About.js:
+===============
+ 
+import React from 'react'
+const About = () => {
+    return (
+<div>
+<center>
+<h4>Displaying About Page</h4>
+</center>
+</div>
+    )
+}
+ 
+ 
+Dashbaord.js:
+================
+ 
+import React from 'react'
+const Dashboard = () => {
+    return (
+<div>
+<center>
+<h4>Displaying Dashboard Page</h4>
+</center>
+</div>
+    )
+}
+ 
+Navbar.js:
+==========
+ 
+import React from 'react'
+import {Link} from 'react-router-dom';
+const Navbar = () => {
+    return (
+<div>
+<ul>
+<Link to="/"><li>Home</li></Link>
+<Link to="/dashboard"><li>Dashboard</li></Link>
+<Link to="/about"><li>About</li></Link>
+</ul>
+</div>
+    )
+}
+REACT JS PROPS   What are React JS Props?  ... by Swetha, Boini
+REACT JS PROPS
+ 
+What are React JS Props?
+ 
+ 
+-->Props (short for "properties") are a mechanism for passing data from a parent component to a child component.
+ 
+-->Props allows customize and configure child components by providing them with values or functions.
+ 
+--> Props are immutable, means they cannot be modified within the child component that receives them.
+ 
+-->Props follow a unidirectional data flow (top-down). This means that data is passed from parent to child components, 
+   making the flow of information predictable and easy to trace.
+ 
+-->Props can be any kind of data, such as:
+ 
+Strings, numbers, or booleans
+Arrays or objects
+Functions (for event handling)
+React elements (other components)
+ 
+Why we use React JS Props?
+ 
+-->Props are used to enable communication between components, allowing data to be passed from parent components to child components.
+ 
+-->This makes components dynamic, reusable, and modular.
+ 
+ 
+import React from 'react';
+ 
+// Child Component that accepts props
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+ 
+// Parent Component
+function App() {
+  return <Greeting name="Swetha" />;
+}
+ 
+export default App;
+ 
+Types of React Js Props?
+ 
+1.Primitive Data Types
+ 
+-->Props can hold simple data types like strings, numbers, booleans, and others.
+ 
+ 
+-->STRING
+function Greeting(props) {
+  return <h1>{props.message}</h1>;
+}
+ 
+function App() {
+  return <Greeting message="Hello, World!" />;
+}
+ 
+ 
+-->NUMBER
+function Age(props) {
+  return <p>Your age is: {props.age}</p>;
+}
+ 
+function App() {
+  return <Age age={25} />;
+}
+ 
+2.Objects
+-->Props can also be objects, which can hold multiple key-value pairs. 
+we can pass complex data like user profiles, configurations, etc.
+ 
+function UserProfile(props) {
+  return (
+<div>
+<h2>{props.user.name}</h2>
+<p>Age: {props.user.age}</p>
+</div>
+  );
+}
+ 
+function App() {
+  const user = { name: "Alice", age: 30 };
+  return <UserProfile user={user} />;
+}
+ 
+ 
+Arrays
+ 
+--> We can pass arrays as props to share lists of data or collections of items.
+ 
+function HobbyList(props) {
+  return (
+<ul>
+      {props.hobbies.map((hobby, index) => (
+<li key={index}>{hobby}</li>
+      ))}
+</ul>
+  );
+}
+ 
+function App() {
+  const hobbies = ["Reading", "Cycling", "Cooking"];
+  return <HobbyList hobbies={hobbies} />;
+}
+ 
+ 
+ 
+Introduction of REDUX:   -> Redux is a pred... by SHOBHITHA, PULIJALA SPOORTHI
+Introduction of REDUX:
+ 
+-> Redux is a predictable state management library commonly used in JavaScript applications, especially in the context of React. 
+     It helps manage and centralize the state of an application in a way that makes it more predictable and easier to debug.
+-> Redux is an open-source JavaScript library for managing applications state.
+-> Redux is particularly useful for larger applications where multiple components need to share or manage complex state.
+ 
+============
+ 
+Packages required to use redux:
+ 
+1) npm install redux
+2) npm install react-redux
+3) npm install redux-thunk : it is middleware to handle function and to return function properly
+4) npm install redux-devtools-extension : we can monitor state value in live.
+ 
+Key Concepts of Redux:
+ 
+1) Store: The central place where the state of the application is stored. It's an object that holds all the data for your app.
+ 
+2)Reducers: Functions that specify how the state changes in response to an action.Reducer is part of store .
+            For managing the stored state values.A reducer takes the current state and the action as arguments and returns a new state
+            object. Reducers are pure functions, meaning they don't modify the original state but return a new state.
+ 
+3)Actions: Plain JavaScript objects that describe an event or a change that should happen in the application state.
+           Actions have a type property that specifies the kind of change and may include additional data (payload) 
+           that will help in that change.(type-variable name , payload-amount of date)
+ 
+4)Dispatch: The function used to send an action to the Redux store. This triggers the reducer, which updates the state.
+ 
+5)Selectors: Functions that extract specific data from the Redux state, often used to simplify accessing data within the app.
+ 
+Flow in Redux:
+              When an action is dispatched (triggered by some event in the app, like a user interaction), 
+it is processed by a reducer function, which returns a new state based on the action.
+This new state is then saved in the Redux store, which automatically updates the components that rely on that state.
+ 
+Benefits of Redux:
+1)Predictability: With a single source of truth (the store), the state is predictable, and you can easily track how it changes over time.
+ 
+2)Debugging: Redux’s dev tools allow you to inspect state changes and time-travel debug, which helps identify bugs.
+ 
+3)Centralized State: All your application's state is stored in one place, making it easier to manage and share between different parts of your app.
+ 
+4)Ease of Testing: Since reducers are pure functions, they are easy to test independently of the rest of your application.
+Redux is commonly used with React to manage complex states in large applications, but it can be used with any JavaScript framework or even plain JavaScript.
+// src/store.js import { createStore, apply... by SHOBHITHA, PULIJALA SPOORTHI
+
+// src/store.js
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import reducer from './reducers/reducer'; // Make sure this path is correct
+ 
+const middleware = [thunk];
+ 
+const store = createStore(
+    reducer,
+    composeWithDevTools(applyMiddleware(...middleware))
+);
+ 
+export default store;
+import React from "react" const App =() => ... by SHOBHITHA, PULIJALA SPOORTHI
+SHOBHITHA, PULIJALA SPOORTHI
+Yesterday 09:52
+import React from "react"
+const App =() => {
+    return (
+        <div>
+            <center>
+                <h1>Hello  !</h1>
+            </center>
+        </div>
+    )
+}
+export default App
+const count = 6;   export default function ... by SHOBHITHA, PULIJALA SPOORTHI
+
+const count = 6;
+ 
+export default function reducer(state,action){
+    const {type,playload} =action;
+    switch(type){
+        case "INCREMENT":
+            return count+1;
+        case "DECREMENT":
+            return count-1;
+        default:
+            return count;
+    }
+}
+import React from 'react'; import ReactDOM ... by SHOBHITHA, PULIJALA SPOORTHI
+SHOBHITHA, PULIJALA SPOORTHI
+Yesterday 09:52
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Updated import for React 18
+import './index.js';
+import App from './App.js';
+import store from './store.js';
+import { Provider } from 'react-redux';
+ 
+// Create a root element for React 18+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+ 
+root.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>
+);
+React Testing ===========================... by Samatha, Palavarapu
+
+React Testing
+======================================
+Testing refers to the process of evaluating the application to ensure it works as expected and meets the specified requirements. 
+The goal of testing is to identify any bugs, issues, or areas for improvement, and to verify that the software behaves correctly under various conditions.
+ 
+---->React Testing  involves verifying that the React components work as expected. This is essential for ensuring the reliability of the application. 
+In React, testing can be done at various levels, from unit tests to integration tests and end-to-end (E2E) tests.
+ 
+--->End-to-End (E2E) Testing: Tests the entire application from start to finish to ensure that all components works as expected in real-world scenario.
+ 
+ 
+The tools commonly used in React testing are:
+================================================
+ 
+1.Jest: Jest is a JavaScript testing framework created by Facebook. It is used for running tests, asserting results etc. 
+	Jest provides utilities for testing JavaScript code.
+ 
+2.React Testing Library: It is a library for testing React components,focused on how the components behave from a user perspective,
+			     rather than internal implementation.
+ 
+ 
+React Testing Library
+===========================
+-->The goal of the library is to help to write tests that resemble how a user would use the application.
+-->React Testing Library helps test components by simulating real user interactions, such as clicking buttons, typing in input fields, 
+or navigating through links, instead of testing the method calls or component state directly.
+ 
+ 
+React Testing Library Methods for Finding Elements
+======================================================================
+Most of the React test cases should use methods for finding elements. 
+React Testing Library provides several methods to find an element by specific attributes:
+ 
+getByText(): find the element by its textContent value
+getByRole(): by its role attribute value
+getByLabelText(): by its label attribute value
+getByPlaceholderText(): by its placeholder attribute value
+getByAltText(): by its alt attribute value
+getByDisplayValue(): by its value attribute, usually for <input> elements
+getByTitle(): by its title attribute value
+ 
+ 
+How to Use React Testing Library
+===========================================
+A React application created with "Create React App" (or CRA) already includes both React Testing Library and Jest by default.
+ 
+If you want to use React Testing Library outside of a CRA application, then we need to install both React Testing Library and Jest manually with "npm":
+ 
+ 
+--->syntax: npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+ 
+ 
+You need to install Jest because React Testing Library only provides methods to help us write the test scripts. 
+So you still need a JavaScript test framework to run the test code.
+ 
+To run the tests, you can run the command:
+ 
+------->syntax:npm test
+ 
+Jest will execute the tests, and we can see the results indicating whether the tests pass or fail.
+ 
+ 
+If there are any updates in the software then we need to test the software again also we need to test the one which is already tested.
+ 
+ 
+Sample Code
+=========================================
+ 
+App.js
+--------
+import React, { useState } from 'react';
+ 
+const App = () => {
+  const [count, setCount] = useState(0);
+ 
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+ 
+  return (
+<div>
+<h1>Count: {count}</h1>
+<button onClick={increment}>Increment</button>
+<button onClick={decrement}>Decrement</button>
+</div>
+  );
+};
+ 
+export default App;
+ 
+App.test
+------------
+import { render, screen, fireEvent } from '@testing-library/react';
+import App from './App';
+ 
+describe('App Component', () => {
+  test('renders the counter and buttons', () => {
+    // Render the App component
+    render(<App />);
+ 
+    // Check if the initial count is 0
+    const countElement = screen.getByText(/count:/i);
+    expect(countElement).toHaveTextContent('Count: 0');
+ 
+    // Check if the increment and decrement buttons are present
+    const incrementButton = screen.getByText(/increment/i);
+    const decrementButton = screen.getByText(/decrement/i);
+ 
+    expect(incrementButton).toBeInTheDocument();
+    expect(decrementButton).toBeInTheDocument();
+  });
+ 
+  test('increments the count when increment button is clicked', () => {
+    render(<App />);
+ 
+    const incrementButton = screen.getByText(/increment/i);
+    const countElement = screen.getByText(/count:/i);
+ 
+    fireEvent.click(incrementButton);
+ 
+    expect(countElement).toHaveTextContent('Count: 1');
+  });
+ 
+  test('decrements the count when decrement button is clicked', () => {
+    render(<App />);
+ 
+    const decrementButton = screen.getByText(/decrement/i);
+    const countElement = screen.getByText(/count:/i);
+ 
+    fireEvent.click(decrementButton);
+ 
+    expect(countElement).toHaveTextContent('Count: -1');
+  });
+});
+ 
+setupTest.js(default)
+=======================
+ 
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom';
+Advanced React: ---------------   Advance... by Vineetha, Vaanam
+Advanced React:
+---------------
+ 
+Advanced React refers to a set of techniques, concepts, and best practices
+that go beyond the basics of React. These techniques are typically used to 
+build more efficient, scalable, and maintainable applications. It involves 
+mastering React's advanced features, understanding performance optimization, 
+and applying patterns that help in managing complex state and side effects.
+ 
+Key Concepts in Advanced React:
+--------------------------------
+ 
+1. Hooks:
+--------
+ 
+useEffect: Handles side effects like data fetching, subscriptions, or DOM updates.
+ 
+useState: Manages local state in functional components.
+ 
+useReducer: Manages complex state logic, often used for state with multiple related updates.
+ 
+useContext: Shares state globally across components without prop-drilling.
+ 
+ 
+2. Performance Optimization:
+----------------------------
+ 
+React.memo: Prevents unnecessary re-renders of functional components by memoizing the component.
+ 
+useCallback: Memoizes functions to prevent re-creating them on each render.
+ 
+useMemo: Memoizes expensive calculations to avoid recalculating them on every render.
+ 
+3. Code-Splitting & Lazy Loading:
+----------------------------------
+ 
+React.lazy and Suspense: Dynamically imports components and renders them only when needed, reducing the initial load time.
+ 
+4. State Management:
+--------------------
+ 
+Redux / Context API: Manages global state across the app. Useful for sharing data between distant components.
+ 
+5. Server-Side Rendering (SSR) & Static Site Generation (SSG):
+-------------------------------------------------------------
+ 
+Optimizes performance and SEO by rendering React components on the server (e.g., using Next.js).
+ 
+6. Error Boundaries
+--------------------
+ 
+Catches JavaScript errors in the component tree and prevents the entire app from crashing by displaying a fallback UI.
+ 
+7. React Router (Advanced Routing)
+----------------------------------
+ 
+Manages navigation and routing, including nested and dynamic routes for building multi-page apps.
+ 
+======================================================================================
+ 
+useState: Allows you to add state to functional components.
+ 
+useEffect: Used for side effects like fetching data, logging, or cleaning up.
+ 
+Conditional Rendering: Render UI elements conditionally based on state or props.
+ 
+Event Handling: Functions that respond to user interaction (e.g., button clicks).
+import React, { useState, useEffect } from ... by Vineetha, Vaanam
+Vineetha, Vaanam
+Yesterday 10:21
+import React, { useState, useEffect } from 'react';
+ 
+// Custom Hook for logging component mount
+function useMountLogger() {
+  useEffect(() => {
+    console.log('Component mounted');
+    return () => {
+      console.log('Component will unmount');
+    };
+  }, []);
+}
+ 
+// Main Component
+function App() {
+  const [count, setCount] = useState(0);
+  const [showMessage, setShowMessage] = useState(true);
+ 
+  // Using custom hook
+  useMountLogger();
+ 
+  const increment = () => setCount(prevCount => prevCount + 1);
+  const decrement = () => setCount(prevCount => prevCount - 1);
+ 
+  return (
+    <div className="App">
+      <h1>Advanced React Example</h1>
+ 
+      {/* Conditional Rendering */}
+      {showMessage && <p>Welcome to the counter app!</p>}
+ 
+      <h2>Count: {count}</h2>
+ 
+      {/* Buttons for interaction */}
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+ 
+      {/* Toggling Message */}
+      <button onClick={() => setShowMessage(!showMessage)}>
+        Toggle Welcome Message
+      </button>
+    </div>
+  );
+}
+ 
+export default App;
+ 
+   React Redux   ->React is a JavaScript li... by Mallappa Gudasi, Manjula
+Mallappa Gudasi, Manjula
+Yesterday 10:28
+Edited
+   React Redux
+ 
+->React is a JavaScript library for building user interfaces.
+->Redux is a state management library for JavaScript apps, 
+   used to manage the global state.
+ 
+  In a React app, Redux helps manage and centralize the application's state 
+  in a single store, making it easier to maintain, debug, and scale.
+ 
+=========================================================================
+ 
+Core Concepts of Redux:
+ 
+[1] Store
+ 
+->The Store holds the entire application state in one place. 
+->Think of it as a big container for all your data.
+->You can access the state, and modify it using actions and reducers.
+ 
+==========================================================================
+ 
+[2]Actions
+ 
+->Actions are plain JavaScript objects that describe what should happen in the application.
+->Every action has a type (a string describing the action) and payload (optional data that may accompany the action).
+ 
+Example:
+ 
+const incrementAction = { type: 'INCREMENT' }
+const decrementAction = { type: 'DECREMENT' }
+ 
+==========================================================================
+ 
+[3]Reducers
+ 
+->Reducers are functions that specify how the state changes in response to an action.
+->They take the current state and an action as arguments and return a new state.
+ 
+Example:
+ 
+const counterReducer = (state = { count: 0 }, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    case 'DECREMENT':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+ 
+==========================================================================
+ 
+[4]Dispatch
+ 
+->Dispatch is a function that sends (or dispatches) actions to the Redux store.
+->When an action is dispatched, the reducer processes it and updates the state.
+ 
+==========================================================================
+ 
+[5]Selectors
+ 
+->Selectors are functions that extract specific pieces of data from the Redux store. 
+->They allow React components to access the state in an efficient and reusable way.
+ 
+ 
+=========================================================================
+ 
+How Does React and Redux Work Together?
+ 
+->React is used for building the user interface, while Redux helps to manage the state across the app.
+->React-Redux is the official binding library between React and Redux. 
+->It connects your React components to the Redux store and allows components to access the state and dispatch actions.
+ 
+===========================================================================
+ 
+Key React-Redux Functions
+ 
+[1].Provider
+ 
+->This is a component that makes the Redux store available to all React components in the app.
+->It is usually used at the top level of the app (index.js file).
+ 
+Example:
+ 
+import { Provider } from 'react-redux';
+import { store } from './store';
+ 
+ReactDOM.render(
+<Provider store={store}>
+<App />
+</Provider>,
+  document.getElementById('root')
+);
+ 
+===========================================================================
+ 
+[2].useSelector
+ 
+->A React-Redux hook that lets components read data from the Redux store.
+->It takes a selector function that extracts the necessary data.
+ 
+Example:
+ 
+const count = useSelector(state => state.count);
+ 
+==========================================================================
+ 
+[3].useDispatch
+ 
+->A React-Redux hook that lets components dispatch actions to the Redux store.
+->It returns the dispatch function, which you can use to send actions.
+ 
+Example:
+ 
+const dispatch = useDispatch();
+dispatch({ type: 'INCREMENT' });
+ 
+=======================================================================
+ 
+Flow of Data in React-Redux
+ 
+(1)User Interaction:   
+->A user clicks a button or performs an action in the app.
+ 
+(2)Dispatch Action:  
+->The event triggers a Redux action to update the state (e.g., dispatch({ type: 'INCREMENT' })).
+ 
+(3)Reducer:  
+->The action is processed by the reducer, which updates the state.
+ 
+(4)Update UI: 
+-> React components read the updated state using useSelector and re-render to display the latest data.
+ 
+ 
+============================================================================
+ 
+Why Use Redux in React?
+ 
+(1)Centralized State: 
+-> Redux keeps the app's state in a single store, making it easier to manage across different components.
+ 
+(2)Predictable State: 
+->Since the state can only be modified by actions and reducers, it's easy to track and debug state changes.
+ 
+(3)Scalability: 
+->As the app grows, managing state with Redux becomes more organized compared to using local state in individual components.
+ 
+(4)Better Debugging: 
+->Redux DevTools allows you to track every action and state change in real-time, making debugging much easier.
+   // redux.js
+ 
+// Actions
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+ 
+// Action Creators
+export const increment = () => ({ type: INCREMENT });
+export const decrement = () => ({ type: DECREMENT });
+ 
+// Initial State
+const initialState = {
+  count: 0,
+};
+ 
+// Reducer
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return { count: state.count + 1 };
+    case DECREMENT:
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import { Provider } from 'react-redux';
+import { store } from './redux';
+ 
+ReactDOM.render(
+<Provider store={store}>
+<App />
+</Provider>,
+  document.getElementById('root')
+);import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from './redux';
+ 
+function App() {
+  // Access the state from the Redux store using useSelector
+  const count = useSelector((state) => state.count);
+ 
+  // Access the dispatch function from Redux using useDispatch
+  const dispatch = useDispatch();
+ 
+  return (
+<div className="App">
+<h1>Redux Counter Example</h1>
+<p>Count: {count}</p>
+<button onClick={() => dispatch(increment())}>Increment</button>
+<button onClick={() => dispatch(decrement())}>Decrement</button>
+</div>
+  );
+}
+ 
+export default App;
+Meeting ended: at Yesterday 10:44 after 1 hour 19 minutes 14 seconds
+Yesterday 10:44 Meeting ended: 1h 19m 14s
+Pathway for L1 Ocean Assessment    Link htt... by KR, Shankar
+
+ 
+
+ 
+We have assessment QB with the below combination of topics
+React :
+Class components with props and state
+Routing,
+Styles,
+Form validation
+Service with either rendering data from a JSON  (or) service to perform CRUD (By using array)
+ 
+
+spring.application.name= GateWayService spr... by KR, Shankarspring.application.name=GateWayService
+spring.main.web-application-type=reactive
+server.port=8083
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+package com.cg;   import org.springframewor... by KR, Shankar
+KR, Shankar
+Yesterday 14:19
+package com.cg;
+ 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+ 
+ 
+@SpringBootApplication
+public class GateWayServiceApplication {
+ 
+	public static void main(String[] args) {
+		SpringApplication.run(GateWayServiceApplication.class, args);
+	}
+		@Bean
+	    public RouteLocator routerBuilder(RouteLocatorBuilder routeLocatorBuilder){ 
+	        return routeLocatorBuilder.routes() 
+	                        .route("ProductService",r->r.path("/api/v1/product/**") 
+	                                .uri("http://localhost:8081/")) 
+	                        .route("DepartmentService",r->r.path("/api/v1/dept/**") 
+	                                .uri("http://localhost:8082/")).build(); 
+	    } 
+	}
+ 
+ 
+Online Shopping ================ 			... by KR, ShankarOnline Shopping
+================
+											|----------->	Registrationservice>8081  	|
+											|		      LoginService ------>8086	|
+								9090			|			ProductService ---->8082	|
+Request ------------> GatwWayAPIService --------------------------|     	      CartService-------->8083	| All must be registered to 
+											|			OrderService------->8084	|	EurekaServerService
+											|----------->     Walletservice------>8085 	|
+
+
+
+ 
